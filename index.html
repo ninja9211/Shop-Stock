@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Stock Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Shop Stock</h1>
+  
+  <div class="filters">
+    <label for="filterBrand">Filter by Brand:</label>
+    <input type="text" id="filterBrand" onkeyup="filterStock()">
+    <label for="filterCategory">Filter by Category:</label>
+    <input type="text" id="filterCategory" onkeyup="filterStock()">
+</div>
+
+<button onclick="saveStockData()">Save</button>
+
+  
+  
+  <div class="stock-form">
+    <h2>Enter/Update Stock</h2>
+    <input type="text" id="brandName" placeholder="Brand Name">
+    <input type="text" id="brandCategory" placeholder="Brand Category">
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <input type="number" id="productQuantity" placeholder="Quantity">
+    <button onclick="updateStock()">Update Stock</button>
+  </div>
+
+  <table id="stockTable">
+    <tr>
+      <th>Brand Name</th>
+      <th>Brand Category</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    <!-- Stock items will be dynamically added here -->
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
